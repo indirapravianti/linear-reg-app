@@ -6,14 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".InputData">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:src="@drawable/logo2"
+        android:layout_marginTop="40dp"
+        />
     <EditText
         android:id="@+id/editTextX"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter for X"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="80dp"
         android:layout_marginHorizontal="100dp"
-        android:inputType="number"/>
+        android:layout_below="@id/logo"
+        android:inputType="number"
+        android:textColor="#161616"
+        android:fontFamily="@font/ps_regular"
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/editTextY"
@@ -24,24 +35,45 @@
         android:layout_marginHorizontal="100dp"
         android:layout_below="@+id/editTextX"
         android:layout_marginTop="25dp"
-        android:inputType="number"/>
+        android:inputType="number"
+        android:textColor="#161616"
+        android:fontFamily="@font/ps_regular"
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/btnCalculate"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="next"
         android:layout_below="@+id/editTextY"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"/>
+        android:layout_marginTop="25dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btn_rounded"
+        android:fontFamily="@font/ps_bold"/>
 
     <TextView
         android:id="@+id/textViewResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnNext"
+        android:layout_below="@+id/btnCalculate"
         android:text="The regression line is Y = 0.372 + 3.219X"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp" />
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/ps_regular"
+        android:textSize="18sp"
+        android:textColor="#161616"/>
+
+    <TextView
+        android:id="@+id/textViewError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewResult"
+        android:text="The sum of error is 2.47"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/ps_regular"
+        android:textSize="18sp"
+        android:textColor="#161616"/>
 
 </RelativeLayout>

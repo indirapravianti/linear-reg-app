@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class InputData extends AppCompatActivity {
     float[] X;
     float[] Y;
-    float sumX = 0, sumY = 0, sumXY = 0, sumXX = 0;
+    float sumX = 0, sumY = 0, sumXY = 0, sumXX = 0, errorTotal = 0;
     float a, b;
     int i = 0;
     int n;
@@ -20,6 +20,7 @@ public class InputData extends AppCompatActivity {
     EditText editTextX;
     EditText editTextY;
     TextView result;
+    TextView errorText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class InputData extends AppCompatActivity {
         editTextX = findViewById(R.id.editTextX);
         editTextY = findViewById(R.id.editTextY);
         result = findViewById(R.id.textViewResult);
+        errorText = findViewById(R.id.textViewError);
         n = Integer.parseInt(intent.getStringExtra("EXTRA_N"));
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
@@ -69,9 +71,13 @@ public class InputData extends AppCompatActivity {
                         //btnCalculate.setVisibility(View.GONE);
                         b = ((n*sumXY) - (sumX * sumY)) / ((n * sumXX) - (sumX*sumX));
                         a = (sumY / n) - ((sumX / n) * b);
+                        for(int w = 0; w < n; w++){
+                            errorTotal += (Y[w] - a - b * X[w]) *(Y[w] - a - b * X[w]);
+                        }
                         Log.v("nilai a", String.valueOf(a));
                         Log.v("nilai b", String.valueOf(b));
                         result.setText("The regression line is Y = " + a + " + " + b + " X");
+                        errorText.setText("The sum of error is " + errorTotal);
                     }
                 }
 
