@@ -42,22 +42,25 @@
 
     <Button
         android:id="@+id/btnCalculate"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:text="next"
+        android:text="NEXT"
         android:layout_below="@+id/editTextY"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:textColor="#FFFFFF"
         android:background="@drawable/btn_rounded"
-        android:fontFamily="@font/ps_bold"/>
+        android:fontFamily="@font/ps_bold"
+        android:paddingVertical="10dp"
+        android:textAlignment="center"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/textViewResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnCalculate"
-        android:text="The regression line is Y = 0.372 + 3.219X"
+        android:text="The regression line is Y = ..."
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:fontFamily="@font/ps_regular"
@@ -69,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewResult"
-        android:text="The sum of error is 2.47"
+        android:text="The sum of error is ..."
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/ps_regular"

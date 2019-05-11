@@ -50,7 +50,7 @@ public class InputData extends AppCompatActivity {
                     Log.v("n adalah = ", String.valueOf(n));
                     Log.v("i adalah = ", String.valueOf(i));
                     if (i == n-1){
-                        btnCalculate.setText("calculate");
+                        btnCalculate.setText("CALCULATE");
                     }
                     if(i == n){
                         for(int w = 0; w < n; w++) {
