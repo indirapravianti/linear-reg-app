@@ -25,7 +25,7 @@
             android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:src="@drawable/logo3"
+            android:src="@drawable/lrc_white"
             android:layout_marginTop="20dp"
             />
 
@@ -57,55 +57,55 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
-
-            <TextView
-                android:id="@+id/command"
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enter the number of data"
-                android:layout_centerHorizontal="true"
-                android:textColor="#161616"
-                android:fontFamily="@font/ps_regular"
-                android:textSize="18sp"
-                android:gravity="center"
-                android:layout_marginTop="22dp"/>
+                android:layout_centerInParent="true">
 
-            <EditText
-                android:id="@+id/editTextn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="70dp"
-                android:hint="example: 3"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/ps_regular"
-                android:inputType="number"
-                android:textSize="18sp"
-                android:layout_below="@+id/command"
-                android:layout_marginTop="16dp"/>
+                <TextView
+                    android:id="@+id/command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter the number of data"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#161616"
+                    android:fontFamily="@font/ps_regular"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginTop="22dp"/>
 
-            <Button
-                android:id="@+id/btnNext"
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:text="Next"
-                android:layout_below="@+id/editTextn"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:textColor="#FFFFFF"
-                android:background="@drawable/btn_rounded"
-                android:fontFamily="@font/ps_bold"
-                android:textAlignment="center"
-                android:paddingVertical="10dp"
-                android:textSize="16sp"
-                android:gravity="center_horizontal"
-                />
+                <EditText
+                    android:id="@+id/editTextn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="70dp"
+                    android:hint="example: 3"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/ps_regular"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/command"
+                    android:layout_marginTop="16dp"/>
 
-        </RelativeLayout>
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="Next"
+                    android:layout_below="@+id/editTextn"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/btn_rounded"
+                    android:fontFamily="@font/ps_bold"
+                    android:textAlignment="center"
+                    android:paddingVertical="10dp"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    />
+
+            </RelativeLayout>
 
         </RelativeLayout>
 

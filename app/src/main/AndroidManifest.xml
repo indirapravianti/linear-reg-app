@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Linear-Reg Calculator"
-        android:roundIcon="@drawable/logo"
+        android:roundIcon="@drawable/lrc_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".InputData"></activity>
