@@ -4,79 +4,168 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InputData">
+    tools:context=".InputData"
+    android:background="#efefef">
 
-    <ImageView
-        android:id="@+id/logo"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frameLayout"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:src="@drawable/logo2"
-        android:layout_marginTop="40dp"
-        />
-    <EditText
-        android:id="@+id/editTextX"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter for X"
-        android:layout_marginTop="80dp"
-        android:layout_marginHorizontal="100dp"
-        android:layout_below="@id/logo"
-        android:inputType="number"
-        android:textColor="#161616"
-        android:fontFamily="@font/ps_regular"
-        android:textSize="18sp"/>
+        android:layout_height="400dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
 
-    <EditText
-        android:id="@+id/editTextY"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter for Y"
-        android:layout_centerVertical="true"
-        android:layout_marginHorizontal="100dp"
-        android:layout_below="@+id/editTextX"
-        android:layout_marginTop="25dp"
-        android:inputType="number"
-        android:textColor="#161616"
-        android:fontFamily="@font/ps_regular"
-        android:textSize="18sp"/>
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/linear2"
+            android:scaleType="fitXY" />
 
-    <Button
-        android:id="@+id/btnCalculate"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:text="NEXT"
-        android:layout_below="@+id/editTextY"
-        android:layout_centerHorizontal="true"
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/logo3"
+            android:layout_marginTop="20dp"/>
+
+    </FrameLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/upperCard"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="100dp"
+        android:padding="5dp"
+        app:cardBackgroundColor="#ffff"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter the data below"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#161616"
+                    android:fontFamily="@font/ps_regular"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginTop="22dp"/>
+
+                <EditText
+                    android:id="@+id/editTextX"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter for X"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:inputType="number"
+                    android:textColor="#161616"
+                    android:fontFamily="@font/ps_regular"
+                    android:textSize="14sp"
+                    android:layout_below="@id/command"/>
+
+                <EditText
+                    android:id="@+id/editTextY"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter for Y"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_below="@+id/editTextX"
+                    android:layout_marginTop="25dp"
+                    android:inputType="number"
+                    android:textColor="#161616"
+                    android:fontFamily="@font/ps_regular"
+                    android:textSize="14sp"/>
+
+                <Button
+                    android:id="@+id/btnCalculate"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="NEXT"
+                    android:layout_below="@+id/editTextY"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/btn_rounded"
+                    android:fontFamily="@font/ps_bold"
+                    android:paddingVertical="10dp"
+                    android:textAlignment="center"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/lowerCard"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/btn_rounded"
-        android:fontFamily="@font/ps_bold"
-        android:paddingVertical="10dp"
-        android:textAlignment="center"
-        android:textSize="16sp"/>
+        android:padding="5dp"
+        app:cardBackgroundColor="#ffff"
+        app:cardCornerRadius="20dp"
+        android:layout_below="@id/upperCard">
 
-    <TextView
-        android:id="@+id/textViewResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnCalculate"
-        android:text="The regression line is Y = ..."
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:fontFamily="@font/ps_regular"
-        android:textSize="18sp"
-        android:textColor="#161616"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textViewError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewResult"
-        android:text="The sum of error is ..."
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/ps_regular"
-        android:textSize="18sp"
-        android:textColor="#161616"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:layout_marginHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RESULT"
+                    android:textColor="#161616"
+                    android:fontFamily="@font/ps_bold"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/textViewResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The regression line is Y = ..."
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#161616"
+                    android:fontFamily="@font/ps_regular"
+                    android:textSize="14sp"
+                    android:layout_marginTop="22dp"
+                    android:layout_below="@id/result"/>
+
+                <TextView
+                    android:id="@+id/textViewError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewResult"
+                    android:text="The sum of error is ..."
+                    android:layout_marginTop="22dp"
+                    android:fontFamily="@font/ps_regular"
+                    android:textSize="14sp"
+                    android:textColor="#161616"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
 
 </RelativeLayout>
